@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+
+    max-width: 100%;
+    overflow-x: hidden;
+}
+#logo:hover{
+    animation: rotate 1s infinite;
+}
+
+@keyframes rotate{
+    50%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg)
+    }
+}
+.primary-header{
+    padding: 1rem;
+    position: sticky;
+    top: 0;   
+
+   
+
+}
+
+.primary-header.sticking{
+    background: white;
+    z-index: 9999;
+    top: 0;
+    
+
+}
+
+#dropdown,#dropdown_2{
+   top: 0;
+z-index: -1 !important;
+height: 38rem;
+display: none;
+}
+
+#img-container_2-text{
+    top: 130px;
+}
+
+
+.image-container, .image-container-2, .image-container_1, .image-container_2{
+    position: relative;
+    width: 650px;
+    height: 438px; 
+    overflow: hidden;
+
+}
+.image, .image-2,
+ .image_1, .image_2{
+    position: relative;
+}
+
+
+.image:after, .image-2:after, .image_1:after, .image_2:after{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: all 0.5s;
+    border-radius:0;
+}
+.image-container:hover .image:after,
+.image-container:hover .image img,
+.image-container-2:hover .image-2:after,
+.image-container-2:hover .image-2 img,
+
+.image-container_1:hover .image_1:after,
+.image-container_1:hover .image_1 img,
+.image-container_2:hover .image_2:after,
+.image-container_2:hover .image_2 img
+
+{ 
+    opacity: 1;
+    border-radius: 60px 
+    
+}
+
+
+
+
+.nav--hidden{
+    transform: translateY(-100px);
+    z-index: 9999;
+    transition: transform 1s;
+}
+
+#box2{
+  --fill: #7F2F64;
+  width: 120px;
+  height: 120px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  overflow: hidden;
+  position: absolute;
+  color: var(--fill);
+  box-sizing : border-box;
+  transform: rotate(45.85deg);
+    &:after{
+    content: ' ';
+    width: 300px;
+    height: 300px;
+    border:50px solid;
+    border-color : var(--fill) var(--fill);
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+  }
+}
+
+#object2{
+    --fill: #7F2F64;
+  width: 15rem;
+  height: 15rem;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  overflow: hidden;
+  position: absolute;
+  color: var(--fill);
+  box-sizing : border-box;
+  transform: rotate(45.85deg);
+    &:after{
+    content: ' ';
+    width: 30rem;
+    height: 30rem;
+    border:50px solid;
+    border-color : var(--fill) var(--fill);
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+  }
+}
+
+
+
+
+.text{
+    position: relative;
+    width: max-content;
+    animation : my-animation 5s linear infinite;
+  
+}
+
+
+@keyframes my-animation {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+
+footer h3,
+footer p,
+footer ul,
+footer li {
+    position: relative;
+    z-index: 1;
+}
+
+
+.object{
+    z-index: 0;;
+}
