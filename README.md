@@ -11,4 +11,4 @@ https://github.com/Augustma551/Cloning-Nortera-WebPage/assets/91522446/9cafdd04-
 
 
 
-N.B: there is an issue with navbar animation (when scrolling up and down navbar's background color changing), when its ran in local there is no problem with the navbar animation but when publish in github its not worked.
+N.B: there is an issue with navbar animation (when scrolling up and down navbar's background color changing), when its ran in windows OS there is no problem with the navbar animation but when publish in macOs its not worked.
