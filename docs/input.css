@@ -29,10 +29,10 @@ body{
 }
 
 #dropdown,#dropdown_2{
-   top: 0;
-z-index: -1!important;
-height: 38rem;
-display: none;
+    top: 0;
+    z-index: -1 !important;
+    height: 38rem;
+    display: none;
 }
 
 #img-container_2-text{
