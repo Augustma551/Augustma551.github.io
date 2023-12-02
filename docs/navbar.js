@@ -78,37 +78,42 @@ $(document).ready(function(){
 
 
 // changing the navbar's color
+let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
-	const currentScrollY = window.scrollY;
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-	if (currentScrollY === 0) {
-		primaryHeader.style.transition = '0.6s';
-		primaryHeader.style.backgroundColor = 'initial';
-		primaryHeader.style.transition = "slide"
-	} else {
-		primaryHeader.style.transition = '0.6s';
-		primaryHeader.style.backgroundColor = 'white';
-	}
-	
+    if (currentScroll > lastScroll) {
+        // Scrolling down
+        primaryHeader.style.transition = '0.6s';
+        primaryHeader.style.backgroundColor = 'initial';
+    } else {
+        // Scrolling up
+        primaryHeader.style.transition = '0.6s';
+        primaryHeader.style.backgroundColor = 'white';
+    }
+
+    lastScroll = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
 });
 
-scrollWatcher.setAttribute('data-scroll-watcher', ' ');
+scrollWatcher.setAttribute('data-scroll-watcher', '');
 primaryHeader.before(scrollWatcher);
 
+const bgOptions = {
+    rootMargin: '-200px 0px 0px 0px',
+};
 
-const navObserver = new IntersectionObserver(function (entries, navObserver) {
-	!entries.forEach((entry) => {
-		if (!entry.isIntersecting) {
-			primaryHeader.classList.add('sticking');
-		} else {
-			primaryHeader.classList.remove('sticking');
-		}
-	});
+const navObserver = new IntersectionObserver((entries, navObserver) => {
+    entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+            primaryHeader.classList.add('sticking');
+        } else {
+            primaryHeader.classList.remove('sticking');
+        }
+    });
 }, bgOptions);
 
 navObserver.observe(scrollWatcher);
-
 
 
 const icons = document.getElementById('iconToggle');
