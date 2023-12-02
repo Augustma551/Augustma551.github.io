@@ -93,7 +93,7 @@ window.addEventListener('scroll', () => {
 	
 });
 
-scrollWatcher.setAttribute('data-scroll-watcher', '');
+scrollWatcher.setAttribute('data-scroll-watcher', ' ');
 primaryHeader.before(scrollWatcher);
 
 
