@@ -100,7 +100,7 @@ scrollWatcher.setAttribute('data-scroll-watcher', '');
 primaryHeader.before(scrollWatcher);
 
 const bgOptions = {
-    rootMargin: '-200px 0px 0px 0px',
+    rootMargin: '200px 0px 0px 0px',
 };
 
 const navObserver = new IntersectionObserver((entries, navObserver) => {
