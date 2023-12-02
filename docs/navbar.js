@@ -9,7 +9,7 @@ let isScrolllingUp = false;
 
 
 const bgOptions = {
-	rootMargin: '-200px 0px 0px 0px',
+	rootMargin: '-50px 0px 0px 0px',
 };
 
 // envelope bg changing and add classlist
