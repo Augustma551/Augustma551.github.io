@@ -7,10 +7,8 @@ let lastScrollY = 0;
 const colorEnvelope = document.getElementById('bg-envelope');
 let isScrolllingUp = false;
 
-
-
 const bgOptions = {
-	rootMargin: '-100px 0px 0px 0px',
+	rootMargin: '-10px 0px 0px 0px',
 };
 
 // envelope bg changing and add classlist
