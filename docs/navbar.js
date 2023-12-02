@@ -8,7 +8,6 @@ const colorEnvelope = document.getElementById('bg-envelope');
 let isScrolllingUp = false;
 
 
-
 const bgOptions = {
 	rootMargin: '-200px 0px 0px 0px',
 };

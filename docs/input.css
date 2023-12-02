@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 body{
 
     max-width: 100%;
@@ -22,22 +20,17 @@ body{
     padding: 1rem;
     position: sticky;
     top: 0;   
-
-   
-
 }
 
 .primary-header.sticking{
     background: white;
     z-index: 9999;
     top: 0;
-    
-
 }
 
 #dropdown,#dropdown_2{
    top: 0;
-z-index: -1 !important;
+z-index: -1!important;
 height: 38rem;
 display: none;
 }
