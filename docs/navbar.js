@@ -10,7 +10,7 @@ let isScrolllingUp = false;
 
 
 const bgOptions = {
-	rootMargin: '-200px 0px 0px 0px',
+	rootMargin: '-100px 0px 0px 0px',
 };
 
 // envelope bg changing and add classlist
@@ -42,13 +42,7 @@ window.addEventListener('scroll', () => {
 	lastScrollY = currentScrollY;
 });
 
-// document.getElementById('ourFood').addEventListener('mouseover', function (){
-// 	document.getElementById('navbar').style.backgroundColor = 'white'
-// })
 
-// document.getElementById('ourFood').addEventListener('mouseleave', function(){
-// 	document.getElementById('navbar').style.backgroundColor= ' ';
-// })
 
 $(document).ready(function(){
 	
